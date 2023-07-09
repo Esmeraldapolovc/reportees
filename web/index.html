@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Java Script</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Esmeralda">
+        <link rel="stylesheet" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-utilities.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-grid.min.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="rol-12">
+                    <h1>Ejemplos B&aacute;sicos en JavaScript</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-heard">
+                            <h4>Hola mundo</h4>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-primary" onclick="saludar();">Saludar</button> 
+                            <button class="btn btn-ontline-success" onclick="navegar();">ir a otro sitio</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-heard">
+                            <h4>Saludo personalisado</h4>
+                        </div> 
+                        <div class="card-body">
+                            <div>
+                                <div class="form-group">
+                                    <label class="form-label" for="textNombre"> Introduce tu nombre</label>
+                                    <input id="textNombre" type="text" placeholder="Nombre completo."/>
+                                </div>
+                                <div class="mt-2">
+                                    <button class="btn btn-outline-primery" onclick="generarSaludo();">Saludo personalizado</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-heard">
+                            <h4>Calculadora</h4>
+                        </div> 
+                        <div class="card-body">
+                            <div>
+                                <div class="form-group">
+                                    <label class="form-label">N&uacute;mero 1:</label>
+                                    <input id="txtNumero1" type="text">
+                                </div>
+                                <div class="form-group mt-4">
+                                    <label class="form-label">N&uacute;mero 2:</label>
+                                    <input id="txtNumero2" type="text">
+                                </div>
+                                <div class="mt-2">
+                                    <button onclick="realizarOperacion(1);">sumar</button>
+                                    <button onclick="realizarOperacion(2);">Restar</button>
+                                    <button onclick="realizarOperacion(3);">Multiplicar</button>
+                                    <button onclick="realizarOperacion(4);">Dividir</button>
+                                </div>
+                                <div class="form-grop mt-2">
+                                    <label class="form-label">resultado:</label>
+                                    <input id="txtResultado" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-heard">
+                            <h4>Calcular a&ntilde;o</h4>
+                        </div> 
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label">Introduce un a&ntilde;o</label>
+                                <input id="txtAnio" type="number"  placeholder="Introduzca datos" value=""/>
+                            </div>
+                            <div class="mt-4">
+                                <button onclick="calcularBisiesto();">Consultar</button>
+                            </div>
+                            <div class="mt-4">
+                                <label class="form-label fw-bold " id="lblResultadoAnio">aqui va el resultado</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="col-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Cotizador de churritos</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-label">
+                                <label class="form-label" for="cmbTamanio">Tama&ntilde;o</label>
+                                <select id="cmbTamanio" class="form-select">
+                                    <option value="10.0">chico($10.0)</option>
+                                    <option value="15.0">Mediano($15.0)</option>
+                                    <option value="20.0">Grande($20.0)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label">Aditivos:</label>
+                                 <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="chbsalsa">
+                                    <label class="form-check-label" for="chbSalsa">
+                                       salsa($2.0)
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="chbCrema">
+                                    <label class="form-check-label" for="chbCrema">
+                                        Crema ($5.0)
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="chbcueritos">
+                                    <label class="form-check-label" for="chbcueritos">
+                                        cueritos ($3.0)
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value=" " id="chbcol">
+                                    <label class="form-check-label" for="chbcol">
+                                        col ($2.0)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label class="form-label">Descuento de compas (10%)</label>
+                                <div class="form-check mt-2">
+                                     <input class="form-check-input" type="radio" name="rbtnDescuento" id="rbtnDescuentoSI">
+                                    <label class="form-check-label" for="rbtnDescuentoSI">
+                                        S&iacute;
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                     <input class="form-check-input" type="radio" name="rbtnDescuento" id="rbtnDescuentoNO"/>
+                                    <label class="form-check-label" for="rbtnDescuentoNO">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button  class="btn btn-outline-success" onclick="cotizarchurros()">Clacular costo</button>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label class="form-label" for="txtTotal">Total:</label>
+                                <input id="txtTotal" class="form-control" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ******************class="form-check-input" type="radio" name="rbtnDescuento" id="rbtnDescuentoNO"******************************* -->
+
+
+
+
+            <script src="js/ejemplos.js"></script>
+            
+
+
+    </body>
+
+
+</html>
